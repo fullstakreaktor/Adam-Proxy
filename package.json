@@ -1,0 +1,24 @@
+{
+  "name": "adam-proxy",
+  "version": "1.0.0",
+  "description": "adam's proxy repo",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fullstakreaktor/Adam-Proxy.git"
+  },
+  "author": "adam carter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fullstakreaktor/Adam-Proxy/issues"
+  },
+  "homepage": "https://github.com/fullstakreaktor/Adam-Proxy#readme",
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-contrib-uglify": "^3.4.0"
+  }
+}
