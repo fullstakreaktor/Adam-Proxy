@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>FEC Demo</title>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="http://airpnp-reservation.us-west-2.elasticbeanstalk.com/styles.css">
+    <link rel="stylesheet" href="http://18.222.240.125:3002/app.css">
+    <link rel="stylesheet" href="http://52.49.157.131:3000/app.css">
+    <link rel="stylesheet" href="http://18.222.196.193:3001/styles.css">
+    <link rel='stylesheet' href='bundled-styles.css'>
+
+  </head>
+  <body>
+    <div id="hero"></div>
+    <div id='gallery'></div>
+    <div id='listing-body' class='row'>
+      <div>
+        <div id="reviews"></div>
+        <div id="app"></div>
+      </div>
+      <div id="reservation"></div>
+    </div>
+    <!-- Hero URL-->
+    <script src="http://52.49.157.131:3000/bundle.js"></script>
+    <!-- Reservations URL-->
+    <script src="http://airpnp-reservation.us-west-2.elasticbeanstalk.com/bundle.js"></script>   
+    <!-- Review URL-->
+    <script src="http://18.222.240.125:3002/app.js"></script>
+    <!-- About URL -->
+    <script src='http://18.222.196.193:3001/app.js'></script>
+
+        <script>
+          var reviewOptions = {listing_id: 8};
+          var reservationOptions = {listingId: 8};
+          var heroOptions = {listingId: 8};
+          var aboutOptions = {listingId: 8}
+          
+          ReactDOM.render(
+            React.createElement(Review, reviewOptions), document.getElementById('reviews') 
+          );
+
+          ReactDOM.render(
+            React.createElement(Hero, heroOptions), document.getElementById('hero') 
+          );
+
+          ReactDOM.render(
+            React.createElement(ReservationBox, reservationOptions), document.getElementById('reservation') 
+          );
+
+        </script>
+
+  </body>
+</html>
